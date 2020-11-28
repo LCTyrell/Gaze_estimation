@@ -96,7 +96,3 @@ It might be interesting to find a way to do a "parallel" loading.
 
 Finally, we get the best result using several devices (using the two faster: GPU and CPU, with mixed precision of FP16 and INT8).
 
-
-### Async Inference
-
-The project was carried out using asynchronous inference (see benchmarks above). We make this choice because synchronous inference cannot work well on live videos (for example webcam) where the inference time must be much faster than the FPS of the device and not contain the video stream.
