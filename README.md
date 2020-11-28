@@ -87,7 +87,7 @@ The benchmark was realized on the **demo.mp4** video.
 
 ## Results
 
-The results show a valuable gain for inference of low precision in terms of frames per second and total inference time. This gain is much greater for the INT8 precision. In addition, the losses in terms of precision are not significant.
+The results show a valuable gain for inference in low precision, in terms of frames per second and total inference time. This gain is much greater for the INT8 precision. In addition, the losses in terms of precision are not significant.
 
 It can be noted that if the results of the NCS2 device are lower than those of the other devices, they remain satisfactory.
 
