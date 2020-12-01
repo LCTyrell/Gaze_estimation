@@ -1,5 +1,5 @@
 # Gaze Estimation
-
+The gaze estimation model is used to estimate the gaze direction of the user's eyes.  
 ![Alt Text](results/gif_gaze2.gif)
 
 
