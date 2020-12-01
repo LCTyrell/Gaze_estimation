@@ -2,7 +2,7 @@
 
 ![Alt Text](results/gif_gaze2.gif)
   
-The gaze estimation model is used to estimate the gaze direction of the user's eyes. It can be used to control the computer mouse pointer.  
+The gaze estimation model is used to estimate the gaze direction of the user's eyes. It can be used, among other things, to control the computer mouse pointer.  
   
 ## Project Set Up and Installation
 
