@@ -2,7 +2,7 @@
 
 ![Alt Text](results/gif_gaze2.gif)
 
-This project involves using a gaze detection model to control the computer mouse pointer. The gaze estimation model is used to estimate the gaze of the user's eyes and modify the position of the mouse pointer accordingly.
+
 
 ## Project Set Up and Installation
 
