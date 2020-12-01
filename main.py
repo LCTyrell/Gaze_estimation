@@ -10,7 +10,7 @@ from face_detection import Face_detection
 from head_pose_estimation import Head_pose
 from facial_landmark_detection import Landmark_detection
 from gaze_estimation import Gaze_estimation
-from mouse_controller import MouseController
+#from mouse_controller import MouseController
 
 def build_argparser():
     """
@@ -67,7 +67,7 @@ def main():
 
     threshold=args.threshold
 
-    mc=MouseController(precision='low', speed='fast')
+    #mc=MouseController(precision='low', speed='fast')
 
     start_model_load_time=time.time()
 
@@ -117,14 +117,15 @@ def main():
 
             coords, image, head_image= fd.predict(frame, draw_flags)
 
-            land_image, left_eye, right_eye, nose= ld.predict(head_image, draw_flags)
-            head_pose, pose_image= hp.predict(head_image, nose, draw_flags)
-            eye_pose= ge.predict(left_eye, right_eye, head_pose, draw_flags)
+            if coords:
+                land_image, left_eye, right_eye, nose= ld.predict(head_image, draw_flags)
+                head_pose, pose_image= hp.predict(head_image, nose, draw_flags)
+                eye_pose= ge.predict(left_eye, right_eye, head_pose, draw_flags)
 
-            if counter % 4 ==0:
-                mc.move(-eye_pose[0]/10, eye_pose[1]/10)
+            #if counter % 4 ==0:
+                #mc.move(-eye_pose[0]/10, eye_pose[1]/10)
 
-            cv2.imshow("Camera_view",cv2.resize(image,(900,450)))
+            cv2.imshow("Camera_view",cv2.resize(frame,(900,450)))
             #out_video.write(image)
 
         total_time=time.time()-start_inference_time

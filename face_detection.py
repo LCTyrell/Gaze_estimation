@@ -67,6 +67,7 @@ class Face_detection:
         Perform inference.
         '''
         log.info("Performing fd inference...")
+
         feed_dict = self.preprocess_input(image)
         outputs=self.exec_net.start_async(request_id=0, inputs=feed_dict)
         while True:
@@ -75,10 +76,17 @@ class Face_detection:
                 break
             else: time.sleep(1)
         coords=self.preprocess_output(outputs)
-
-        head_image=image[coords[0][1]:coords[0][3], coords[0][0]:coords[0][2]]
+        print(coords)
+        log.info("1")
+        if coords:
+            head_image=image[coords[0][1]:coords[0][3], coords[0][0]:coords[0][2]]
+        elif not coords:
+            head_image=[]
+        log.info("2")
         if 'fd' in draw_flags:
-            self.draw_outputs(coords, image)
+            if coords:
+                self.draw_outputs(coords, image)
+        log.info("3")
         return coords, image, head_image
 
     def preprocess_input(self, image):

@@ -5,7 +5,7 @@ from math import cos, sin
 
 def draw_3d_axis(image, yaw, pitch, roll, origin_x=None, origin_y=None, size = 50):
 
-    pitch = pitch * np.pi / 180
+    pitch = (pitch * np.pi / 180)
     yaw = -(yaw * np.pi / 180)
     roll = roll * np.pi / 180
 
@@ -20,7 +20,7 @@ def draw_3d_axis(image, yaw, pitch, roll, origin_x=None, origin_y=None, size = 5
     cv2.line(image, (int(origin_x), int(origin_y)), (int(x1),int(y1)),(0,0,255),3)	
 
     # Y axis (green)
-    x2 = size * (-cos(yaw) * sin(roll)) + origin_x
+    x2 = size * (cos(yaw) * sin(roll)) + origin_x
     y2 = size * (-cos(pitch) * cos(roll) - sin(pitch) * sin(yaw) * sin(roll)) + origin_y
     cv2.line(image, (int(origin_x), int(origin_y)), (int(x2),int(y2)),(0,255,0),3)
 
