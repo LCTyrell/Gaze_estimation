@@ -26,7 +26,7 @@ For all required dependency, see the requirements.txt file (created with `conda 
 
 The different models are coordinated to manage the input video, extract the face (s), detect the landmark and estimate the pose for this detected face, and finally aggregate the detected eyes and head to make the gaze estimate. The pipeline is shown below:
 
-![Alt Text](results/pipeline.png)
+![Alt Text](results/graph.jpeg)
 
 ## Demo
 
