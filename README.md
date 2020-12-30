@@ -58,10 +58,10 @@ Change the directory to project directory and run main.py with the required argu
 * **-d** : optional, device : CPU, GPU, FPGA, MYRIAD or MULTI (e.g. "MULTI:CPU(2),GPU(2)")
 * **-l** : optional, path to CPU extension if needed
 * **-df** : optional, draw flags, draw output of each selected model:  
-      * fd : Face detection -> green box  
-      * ld : Landmark detection -> white boxs(right and left eyes), green point for nose  
-      * hp : Head pose -> red, blue, green axis (origin: nose point)  
-      * ge : Gaze estimation -> magenta arrowLine  
+      - fd : Face detection -> green box  
+      - ld : Landmark detection -> white boxs(right and left eyes), green point for nose  
+      - hp : Head pose -> red, blue, green axis (origin: nose point)  
+      - ge : Gaze estimation -> magenta arrowLine  
 
 ![Alt Text](results/Capture.png)
 
